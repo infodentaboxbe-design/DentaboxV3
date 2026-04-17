@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+
+<head>
+  <meta charset="utf-8" />
+  <title>Dentabox - Accueil</title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&amp;display=swap"
+    rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+    rel="stylesheet" />
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "secondary-fixed": "#d5e8d1",
+            "error-container": "#ffdad6",
+            "on-tertiary-fixed-variant": "#71314c",
+            "surface-variant": "#e2e3e1",
+            "surface": "#f9f9f7",
+            "surface-container-high": "#e8e8e6",
+            "primary": "#154212",
+            "on-surface-variant": "#42493e",
+            "on-tertiary": "#ffffff",
+            "primary-fixed-dim": "#a1d494",
+            "surface-container-lowest": "#ffffff",
+            "on-tertiary-fixed": "#3b0520",
+            "secondary-container": "#d2e5ce",
+            "on-secondary-container": "#566755",
+            "on-error-container": "#93000a",
+            "on-secondary-fixed-variant": "#3a4b3a",
+            "primary-container": "#2d5a27",
+            "inverse-primary": "#a1d494",
+            "on-surface": "#1a1c1b",
+            "on-secondary-fixed": "#101f11",
+            "inverse-surface": "#2f3130",
+            "secondary-fixed-dim": "#b9ccb5",
+            "surface-dim": "#dadad8",
+            "secondary": "#526351",
+            "outline-variant": "#c2c9bb",
+            "surface-container-low": "#f4f4f2",
+            "surface-tint": "#3b6934",
+            "on-tertiary-container": "#ffaac8",
+            "on-primary-fixed-variant": "#23501e",
+            "on-primary": "#ffffff",
+            "on-primary-fixed": "#002201",
+            "surface-bright": "#f9f9f7",
+            "inverse-on-surface": "#f1f1ef",
+            "outline": "#72796e",
+            "background": "#f9f9f7",
+            "primary-fixed": "#bcf0ae",
+            "surface-container": "#eeeeec",
+            "tertiary-fixed": "#ffd9e4",
+            "on-secondary": "#ffffff",
+            "tertiary": "#60233e",
+            "tertiary-container": "#7c3a55",
+            "on-primary-container": "#9dd090",
+            "surface-container-highest": "#e2e3e1",
+            "tertiary-fixed-dim": "#ffb0cc",
+            "on-error": "#ffffff",
+            "on-background": "#1a1c1b",
+            "error": "#ba1a1a"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.5rem",
+            "lg": "0.5rem",
+            "xl": "1.5rem",
+            "full": "9999px"
+          },
+          "fontFamily": {
+            "headline": ["Inter"],
+            "body": ["Inter"],
+            "label": ["Inter"]
+          }
+        },
+      },
+    }
+  </script>
+  <style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+    }
+
+    .silver-sheen {
+      background: linear-gradient(145deg, #ffffff 0%, #f4f4f2 100%);
+    }
+
+    .primary-gradient {
+      background: linear-gradient(45deg, #154212 0%, #2d5a27 100%);
+    }
+
+    .bento-card {
+      transition: transform 0.3s ease;
+    }
+
+    .bento-card:hover {
+      transform: translateY(-4px);
+    }
+
+    .video-placeholder {
+      background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.4) 100%);
+    }
+  </style>
+</head>
+
+<body class="bg-surface text-on-surface font-body selection:bg-primary-fixed selection:text-on-primary-fixed">
+  <!-- TopNavBar -->
+  <nav class="fixed top-0 left-0 right-0 z-50 bg-surface/70 backdrop-blur-xl">
+    <div class="flex justify-between items-center px-8 py-4 w-full max-w-7xl mx-auto">
+      <div class="text-xl font-bold tracking-[0.1em] text-primary uppercase">DENTABOX</div>
+      <div class="hidden md:flex gap-12 font-['Inter'] tracking-[0.05em] uppercase text-sm font-medium">
+        <a class="text-primary border-b-2 border-primary pb-1"
+          href="../stitch_dentabox_brand_design/index.html">Accueil</a>
+        <a class="text-secondary pb-1 hover:text-primary transition-colors duration-300"
+          href="../stitch_dentabox_brand_design/atelier.html">Nos Produits</a>
+        <a class="text-secondary pb-1 hover:text-primary transition-colors duration-300"
+          href="../stitch_dentabox_brand_design/engagement.html">Engagement</a>
+      </div>
+        <div class="flex items-center gap-2 sm:gap-4">
+        <button id="mobile-menu-button" class="md:hidden text-primary p-1 focus:outline-none flex items-center justify-center">
+          <span class="material-symbols-outlined text-3xl">menu</span>
+        </button>
+        <a href="https://opnform.com/forms/contact-form-wnznts"
+          class="bg-primary text-on-primary px-4 sm:px-6 py-2.5 rounded-full font-['Inter'] tracking-[0.05em] uppercase text-[10px] sm:text-xs font-medium scale-95 active:scale-90 transition-transform primary-gradient inline-block text-center whitespace-nowrap">
+          Commander
+        </a>
+      </div>
+    </div>
+    <!-- Mobile Menu Dropdown -->
+    <div id="mobile-menu" class="hidden md:hidden bg-surface/95 backdrop-blur-xl border-t border-outline-variant/10 absolute w-full left-0 top-full flex flex-col shadow-lg">
+      <a class="px-8 py-4 text-primary font-medium border-b border-outline-variant/10 uppercase tracking-[0.05em] text-sm" href="../stitch_dentabox_brand_design/index.html">Accueil</a>
+      <a class="px-8 py-4 text-secondary hover:text-primary font-medium border-b border-outline-variant/10 uppercase tracking-[0.05em] text-sm" href="../stitch_dentabox_brand_design/atelier.html">Nos Produits</a>
+      <a class="px-8 py-4 text-secondary hover:text-primary font-medium uppercase tracking-[0.05em] text-sm" href="../stitch_dentabox_brand_design/engagement.html">Engagement</a>
+    </div>
+  </nav>
+  <main class="pt-24 pb-12 px-6 max-w-7xl mx-auto space-y-16">
+    <!-- Hero Section -->
+    <section class="grid grid-cols-1 md:grid-cols-12 gap-6 min-h-[600px]">
+      <!-- Main Hero Image -->
+      <div
+        class="md:col-span-7 relative overflow-hidden rounded-xl bg-surface-container-low silver-sheen group order-1">
+        <img alt="Premium dental hygiene set"
+          class="w-full h-full object-cover mix-blend-multiply opacity-90 transition-transform duration-700 group-hover:scale-105"
+          src="img-landingpage/Pack Général.jpeg" />
+      </div>
+      <!-- Hero Content -->
+      <div class="md:col-span-5 flex flex-col justify-center order-2 py-8 px-4">
+        <h1 class="text-4xl md:text-6xl font-bold tracking-tight text-primary leading-[1.1] mb-6">
+          Pack d'Hygiène Buccale Pour un <span class="italic font-normal">Sourire Sain</span>.
+        </h1>
+        <p class="text-secondary text-lg md:text-xl mb-8 leading-relaxed font-medium">
+          Vous vous brossez les dents deux fois par jour, mais votre haleine vous trahit en fin de journée et vos dents
+          jaunissent malgré vos efforts. Le problème ? On ne vous a jamais expliqué le vrai protocole qui change tout.
+        </p>
+        <div class="flex items-center gap-6">
+          <div class="w-16 h-16 bg-surface-container-high p-2 rounded-lg flex items-center justify-center shrink-0">
+            <span class="text-[10px] font-bold text-primary tracking-tighter text-center uppercase">Certifié PEBS</span>
+          </div>
+          <p class="text-secondary max-w-xs text-xs leading-relaxed uppercase tracking-widest">
+            L'expertise technique au service de votre rituel quotidien.
+          </p>
+        </div>
+      </div>
+    </section>
+    <!-- The Truth Section (Industrie vous a menti) -->
+    <section class="space-y-12">
+      <div
+        class="bg-secondary-container/30 rounded-xl p-12 text-center max-w-4xl mx-auto border border-primary-container/10">
+        <h2 class="text-xs uppercase tracking-[0.4em] text-secondary mb-6">Le Constat Clinique</h2>
+        <h3 class="text-3xl md:text-4xl font-bold text-primary mb-6 leading-tight">Ce que vous ne savez pas.</h3>
+        <p class="text-lg text-secondary leading-relaxed mb-8">
+          Le brossage classique ne retire que <span class="text-primary font-bold">60 à 70%</span> de la plaque
+          dentaire. Les bactéries stagnantes sont responsables de l'érosion de votre émail et de votre haleine.
+        </p>
+        <div class="h-1 bg-outline-variant/30 w-32 mx-auto rounded-full"></div>
+      </div>
+      <div class="w-full flex justify-center">
+        <!-- Increased image size from max-w-4xl to max-w-6xl -->
+        <div
+          class="aspect-[21/9] w-full overflow-hidden bg-surface-container-low shadow-sm max-w-6xl mx-auto rounded-3xl">
+          <img alt="Modern clinical dental setting"
+            class="w-full h-full object-cover opacity-90 transition-transform duration-1000 hover:scale-105 rounded-3xl"
+            src="img-landingpage/PackGénéral-Produits sortir.jpeg" />
+        </div>
+      </div>
+    </section>
+    <!-- Detailed Product Selection (Restructured) -->
+    <section class="space-y-8">
+      <div class="flex justify-between items-end">
+        <div>
+          <p class="text-3xl font-bold text-primary">Nos Produits Phares :</p>
+        </div>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <!-- Full Width: Siwak -->
+        <div class="md:col-span-2 bg-surface-container-lowest p-6 md:p-10 rounded-xl bento-card group">
+          <div class="flex flex-col md:flex-row gap-10 items-center">
+            <div
+              class="w-full md:w-1/2 aspect-square md:aspect-video rounded-lg overflow-hidden bg-surface-container-low">
+              <img alt="Siwak Traditionnel"
+                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                src="img-landingpage/Pack Général 2.jpeg" />
+            </div>
+            <div class="w-full md:w-1/2 flex flex-col justify-center">
+              <div class="flex justify-between items-start mb-4">
+                <h4 class="font-bold text-primary text-3xl">Le Pack Général</h4>
+                <span class="text-primary font-semibold text-xl">19.99€</span>
+              </div>
+              <p class="text-secondary text-lg mb-8">La routine ainsi que les produits qui permettent de retrouver une
+                haleine fraîche et des dents plus blanches.</p>
+              <a href="https://opnform.com/forms/contact-form-wnznts"
+                class="w-full md:w-fit px-12 py-4 rounded-full border border-primary text-primary font-medium text-xs uppercase tracking-widest hover:bg-primary hover:text-white transition-all duration-300 inline-block text-center">Ajouter
+                au panier</a>
+            </div>
+          </div>
+        </div>
+        <!-- Column: Gratte-Langue (Smaller) -->
+        <div class="bg-surface-container-lowest p-5 rounded-xl bento-card flex flex-col group">
+          <div class="aspect-square rounded-lg overflow-hidden bg-surface-container-low mb-4 h-48 mx-auto">
+            <img alt="Gratte-Langue Cuivre"
+              class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+              src="img-landingpage/Gratte-Langue.jpeg" />
+          </div>
+          <div class="flex justify-between items-start mb-1">
+            <h4 class="font-bold text-primary text-base">Le Gratte-Langue</h4>
+            <span class="text-primary font-medium text-sm">5€</span>
+          </div>
+          <p class="text-secondary text-[13px] mb-4 flex-1 leading-snug">En acier inoxydable, il élimine les
+            bactéries responsables de la mauvaise haleine.</p>
+          <a href="https://opnform.com/forms/contact-form-wnznts"
+            class="w-full py-2.5 rounded-full border border-primary text-primary font-medium text-[10px] uppercase tracking-widest hover:bg-primary hover:text-white transition-all duration-300 inline-block text-center flex justify-center">Ajouter</a>
+        </div>
+        <!-- Column: Fil Dentaire (Smaller) -->
+        <div class="bg-surface-container-lowest p-5 rounded-xl bento-card flex flex-col group">
+          <div class="aspect-square rounded-lg overflow-hidden bg-surface-container-low mb-4 h-48 mx-auto">
+            <img alt="Fil Dentaire Charbon"
+              class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+              src="img-landingpage/Bâton de Siwak.jpeg" />
+          </div>
+          <div class="flex justify-between items-start mb-1">
+            <h4 class="font-bold text-primary text-base">Siwak</h4>
+            <span class="text-primary font-medium text-sm">3€</span>
+          </div>
+          <p class="text-secondary text-[13px] mb-4 flex-1 leading-snug">Le siwak est une racine naturelle utilisée
+            depuis des millénaires pour nettoyer les dents et purifier l'haleine.</p>
+          <a href="https://opnform.com/forms/contact-form-wnznts"
+            class="w-full py-2.5 rounded-full border border-primary text-primary font-medium text-[10px] uppercase tracking-widest hover:bg-primary hover:text-white transition-all duration-300 inline-block text-center flex justify-center">Ajouter</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Protocol Summary Section -->
+    <section class="bg-surface-container-low rounded-xl p-12 overflow-hidden relative">
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-12 items-center">
+        <div class="md:col-span-4">
+          <h2 class="text-xs uppercase tracking-[0.3em] text-secondary mb-4">Le Protocole</h2>
+          <h3 class="text-4xl font-bold text-primary leading-tight">De 60% à <span class="italic">100%</span> de pureté.
+          </h3>
+          <p class="text-secondary mt-6 text-sm leading-relaxed">
+            Le brossage seul ne suffit pas. Notre pack rassemble les 5 étapes pour transformer votre
+            santé bucco-dentaire durablement.
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+  <!-- Footer -->
+  <footer class="bg-[#f4f4f2] dark:bg-stone-900 rounded-t-lg">
+    <div class="flex flex-col md:flex-row justify-between items-start px-12 py-10 w-full max-w-7xl mx-auto gap-8">
+      <div class="flex flex-col">
+        <div class="text-lg font-bold text-[#154212] font-headline mb-2 uppercase tracking-widest">DENTABOX
+        </div>
+        <p class="font-['Inter'] tracking-[0.05em] uppercase text-xs text-[#526351]">© 2026 Dentabox.</p>
+      </div>
+      <div class="flex flex-col gap-2">
+        <span class="font-['Inter'] tracking-[0.05em] uppercase text-xs font-bold text-[#154212]">Contact</span>
+        <a class="font-['Inter'] tracking-[0.05em] text-xs text-[#526351] hover:text-primary transition-colors"
+          href="mailto:info.dentabox.be@gmail.com">info.dentabox.be@gmail.com</a>
+      </div>
+      <div class="flex space-x-8">
+        <a class="font-['Inter'] tracking-[0.05em] uppercase text-xs text-[#526351] hover:opacity-70 transition-opacity"
+          href="https://www.instagram.com/dentabox_official?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==">Instagram</a>
+      </div>
+    </div>
+  </footer>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const btn = document.getElementById('mobile-menu-button');
+      const menu = document.getElementById('mobile-menu');
+      if(btn && menu) {
+        btn.addEventListener('click', () => {
+          menu.classList.toggle('hidden');
+        });
+      }
+    });
+  </script>
+</body>
+
+</html>

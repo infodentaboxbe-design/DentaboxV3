@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+
+<html class="light" lang="fr">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Dentabox - Produits</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "secondary-fixed": "#d5e8d1",
+                        "error-container": "#ffdad6",
+                        "on-tertiary-fixed-variant": "#71314c",
+                        "surface-variant": "#e2e3e1",
+                        "surface": "#f9f9f7",
+                        "surface-container-high": "#e8e8e6",
+                        "primary": "#154212",
+                        "on-surface-variant": "#42493e",
+                        "on-tertiary": "#ffffff",
+                        "primary-fixed-dim": "#a1d494",
+                        "surface-container-lowest": "#ffffff",
+                        "on-tertiary-fixed": "#3b0520",
+                        "secondary-container": "#d2e5ce",
+                        "on-secondary-container": "#566755",
+                        "on-error-container": "#93000a",
+                        "on-secondary-fixed-variant": "#3a4b3a",
+                        "primary-container": "#2d5a27",
+                        "inverse-primary": "#a1d494",
+                        "on-surface": "#1a1c1b",
+                        "on-secondary-fixed": "#101f11",
+                        "inverse-surface": "#2f3130",
+                        "secondary-fixed-dim": "#b9ccb5",
+                        "surface-dim": "#dadad8",
+                        "secondary": "#526351",
+                        "outline-variant": "#c2c9bb",
+                        "surface-container-low": "#f4f4f2",
+                        "surface-tint": "#3b6934",
+                        "on-tertiary-container": "#ffaac8",
+                        "on-primary-fixed-variant": "#23501e",
+                        "on-primary": "#ffffff",
+                        "on-primary-fixed": "#002201",
+                        "surface-bright": "#f9f9f7",
+                        "inverse-on-surface": "#f1f1ef",
+                        "outline": "#72796e",
+                        "background": "#f9f9f7",
+                        "primary-fixed": "#bcf0ae",
+                        "surface-container": "#eeeeec",
+                        "tertiary-fixed": "#ffd9e4",
+                        "on-secondary": "#ffffff",
+                        "tertiary": "#60233e",
+                        "tertiary-container": "#7c3a55",
+                        "on-primary-container": "#9dd090",
+                        "surface-container-highest": "#e2e3e1",
+                        "tertiary-fixed-dim": "#ffb0cc",
+                        "on-error": "#ffffff",
+                        "on-background": "#1a1c1b",
+                        "error": "#ba1a1a"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "1rem",
+                        "xl": "1.5rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Inter"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    }
+                },
+            },
+        }
+    </script>
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+
+        .bento-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .bento-card:hover {
+            box-shadow: 0 20px 40px rgba(21, 66, 18, 0.06);
+        }
+
+        .metallic-gradient {
+            background: linear-gradient(135deg, #154212 0%, #2d5a27 100%);
+        }
+    </style>
+</head>
+
+<body class="bg-background font-body text-on-surface antialiased">
+    <nav class="fixed top-0 w-full z-50 px-8 py-4 bg-surface/70 backdrop-blur-2xl border-b border-outline-variant/10">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <span class="text-xl font-bold tracking-[0.1em] text-primary">DENTABOX</span>
+            <div
+                class="hidden md:flex items-center space-x-12 font-['Inter'] tracking-[0.05em] uppercase text-sm font-medium">
+                <a class="text-secondary pb-1 hover:text-primary transition-colors duration-300"
+                    href="../stitch_dentabox_brand_design/index.html">Accueil</a>
+                <a class="text-primary border-b-2 border-primary pb-1"
+                    href="../stitch_dentabox_brand_design/atelier.html">Nos Produits</a>
+                <a class="text-secondary pb-1 hover:text-primary transition-colors duration-300"
+                    href="../stitch_dentabox_brand_design/engagement.html">Engagement</a>
+            </div>
+            <div class="flex items-center gap-2 sm:gap-4">
+                <button id="mobile-menu-button" class="md:hidden text-primary p-1 focus:outline-none flex items-center justify-center">
+                    <span class="material-symbols-outlined text-3xl">menu</span>
+                </button>
+                <a href="https://opnform.com/forms/contact-form-wnznts"
+                    class="scale-95 active:scale-90 transition-transform bg-primary text-on-primary px-4 sm:px-6 py-2.5 rounded-full text-[10px] sm:text-xs font-bold tracking-widest uppercase metallic-gradient inline-block text-center whitespace-nowrap">
+                    Commander
+                </a>
+            </div>
+        </div>
+        <!-- Mobile Menu Dropdown -->
+        <div id="mobile-menu" class="hidden md:hidden bg-surface/95 backdrop-blur-2xl border-t border-outline-variant/10 absolute w-full left-0 top-full flex flex-col shadow-lg">
+            <a class="px-8 py-4 text-secondary hover:text-primary font-medium border-b border-outline-variant/10 uppercase tracking-[0.05em] text-sm" href="../stitch_dentabox_brand_design/index.html">Accueil</a>
+            <a class="px-8 py-4 text-primary font-medium border-b border-outline-variant/10 uppercase tracking-[0.05em] text-sm" href="../stitch_dentabox_brand_design/atelier.html">Nos Produits</a>
+            <a class="px-8 py-4 text-secondary hover:text-primary font-medium uppercase tracking-[0.05em] text-sm" href="../stitch_dentabox_brand_design/engagement.html">Engagement</a>
+        </div>
+    </nav>
+    <main class="pt-32 pb-24 px-6 md:px-12 max-w-7xl mx-auto">
+        <header class="mb-24 flex flex-col items-center text-center space-y-4" id="atelier">
+            <div
+                class="flex items-center justify-center gap-2 text-secondary tracking-[0.2em] uppercase text-xs font-semibold">
+                <span class="w-8 h-[1px] bg-outline-variant"></span>
+                Collection 2026
+                <span class="w-8 h-[1px] bg-outline-variant"></span>
+            </div>
+            <h1 class="text-6xl md:text-8xl font-bold tracking-tight text-on-surface leading-[0.9]">Nos Produits</h1>
+        </header>
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-8">
+            <!-- New Gallery Section Replaces "Le Siwak Originel" and the sidebar -->
+            <section class="md:col-span-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+                <div class="aspect-square rounded-xl overflow-hidden bento-card border border-outline-variant/10 group">
+                    <img alt="DentaBox Siwak on Marble"
+                        class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                        src="img-produits/Gratte-Langue.jpeg" />
+                </div>
+                <div class="aspect-square rounded-xl overflow-hidden bento-card border border-outline-variant/10 group">
+                    <img alt="Steel Tongue Scraper Lifestyle"
+                        class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                        src="img-produits/Siwak.jpeg" />
+                </div>
+                <div class="aspect-square rounded-xl overflow-hidden bento-card border border-outline-variant/10 group">
+                    <img alt="Natural Dental Care Scene"
+                        class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                        src="img-produits/Brosse à dent.jpeg" />
+                </div>
+                <div class="aspect-square rounded-xl overflow-hidden bento-card border border-outline-variant/10 group">
+                    <img alt="Aluminum Case Close-up"
+                        class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                        src="img-produits/Bain De Bouche.jpeg" />
+                </div>
+                <div class="aspect-square rounded-xl overflow-hidden bento-card border border-outline-variant/10 group">
+                    <img alt="DentaBox Set on Light Wood"
+                        class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                        src="img-produits/Dentifrice.jpeg" />
+                </div>
+                <div class="aspect-square rounded-xl overflow-hidden bento-card border border-outline-variant/10 group">
+                    <img alt="Minimalist Bathroom Morning Light"
+                        class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                        src="img-produits/Floss.jpeg" />
+                </div>
+            </section>
+            <section class="md:col-span-12 mt-12" id="produits">
+                <div class="mb-12">
+                    <h2 class="text-4xl font-bold tracking-tight mb-4">Nos Produits</h2>
+                    <div class="w-16 h-1 bg-primary"></div>
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <!-- Pack Principal -->
+                    <div
+                        class="bg-surface-container-lowest p-6 rounded-xl border border-primary/20 bento-card flex flex-col justify-between">
+                        <div>
+                            <div
+                                class="bg-primary-fixed text-on-primary-fixed text-[10px] font-bold uppercase tracking-widest px-2 py-1 rounded w-fit mb-4">
+                                Best Seller</div>
+                            <h3 class="text-lg font-bold mb-2 uppercase">Pack Bucco-Hygiénique Général</h3>
+                            <p class="text-sm text-secondary mb-6">La solution contenant la routine complète pour une
+                                hygiène dentaire
+                                d'exception.</p>
+                        </div>
+                        <div class="flex items-center justify-between mt-auto pt-6 border-t border-outline-variant/20">
+                            <span class="text-xl font-bold text-primary">19.99€</span>
+                            <a href="https://opnform.com/forms/contact-form-wnznts"
+                                class="w-10 h-10 rounded-full bg-primary text-on-primary flex items-center justify-center">
+                                <span class="material-symbols-outlined"
+                                    data-icon="add_shopping_cart">add_shopping_cart</span>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- Recharge -->
+                    <div class="bg-surface-container-low p-6 rounded-xl bento-card flex flex-col justify-between">
+                        <div>
+                            <h3 class="text-lg font-bold mb-2 uppercase">Pack Recharge</h3>
+                            <p class="text-sm text-secondary mb-6">Maintenez votre routine avec nos produits de recharge
+                                sélectionnés : Brosse, Dentifrice, Bain de Bouche, Fil Dentaire</p>
+                        </div>
+                        <div class="flex items-center justify-between mt-auto pt-6 border-t border-outline-variant/20">
+                            <span class="text-xl font-bold text-primary">15€</span>
+                            <a href="https://opnform.com/forms/contact-form-wnznts"
+                                class="w-10 h-10 rounded-full bg-secondary text-on-primary flex items-center justify-center">
+                                <span class="material-symbols-outlined"
+                                    data-icon="add_shopping_cart">add_shopping_cart</span>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- Gratte-Langue -->
+                    <div class="bg-surface-container-low p-6 rounded-xl bento-card flex flex-col justify-between">
+                        <div>
+                            <h3 class="text-lg font-bold mb-2 uppercase">Gratte-Langue Inox</h3>
+                            <p class="text-sm text-secondary mb-6">L'instrument indispensable pour réduire la plaque
+                                dentaire et renforcer les gencives naturellement.</p>
+                        </div>
+                        <div class="flex items-center justify-between mt-auto pt-6 border-t border-outline-variant/20">
+                            <span class="text-xl font-bold text-primary">5€</span>
+                            <a href="https://opnform.com/forms/contact-form-wnznts"
+                                class="w-10 h-10 rounded-full bg-secondary text-on-primary flex items-center justify-center">
+                                <span class="material-symbols-outlined"
+                                    data-icon="add_shopping_cart">add_shopping_cart</span>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- Bâton Siwak -->
+                    <div class="bg-surface-container-low p-6 rounded-xl bento-card flex flex-col justify-between">
+                        <div>
+                            <h3 class="text-lg font-bold mb-2 uppercase">Bâton de Siwak</h3>
+                            <p class="text-sm text-secondary mb-6">Unité de Siwak sauvage de qualité supérieure, récolté
+                                traditionnellement.</p>
+                        </div>
+                        <div class="flex items-center justify-between mt-auto pt-6 border-t border-outline-variant/20">
+                            <span class="text-xl font-bold text-primary">3€</span>
+                            <a href="https://opnform.com/forms/contact-form-wnznts"
+                                class="w-10 h-10 rounded-full bg-secondary text-on-primary flex items-center justify-center">
+                                <span class="material-symbols-outlined"
+                                    data-icon="add_shopping_cart">add_shopping_cart</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- New Siwak Section -->
+            <section class="md:col-span-12 mt-12">
+                <div
+                    class="bg-surface-container-lowest rounded-xl p-8 h-full flex flex-col md:flex-row gap-12 bento-card border border-outline-variant/10">
+                    <div class="flex-1 order-2 md:order-1">
+                        <img alt="Siwak Originel Premium" class="w-full h-full object-cover rounded-lg"
+                            src="img-produits/Siwak 2.jpeg" />
+                    </div>
+                    <div class="flex-1 space-y-8 py-4 order-1 md:order-2">
+                        <div>
+                            <h2 class="text-3xl font-bold tracking-tight mb-2">Le Siwak Originel</h2>
+                            <p class="text-secondary text-sm">Le siwak est est la racine d'un arbuste (Le Salvadora
+                                persisca) utilisé depuis des siècles pour nettoyer les dents, réduire la plaque et
+                                rafraîchir l’haleine. Ses fibres douces libèrent des agents antibactériens qui
+                                complètent efficacement le brossage classique.</p>
+                        </div>
+                        <div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
+                            <div class="p-4 rounded-xl bg-surface-container-low border border-outline-variant/10">
+                                <span class="material-symbols-outlined text-primary mb-2"
+                                    data-icon="health_and_safety">health_and_safety</span>
+                                <h4 class="font-bold text-xs uppercase tracking-wider mb-1">Santé</h4>
+                                <p class="text-[10px] text-secondary leading-snug">Réduit la plaque dentaire et renforce
+                                    les gencives naturellement.</p>
+                            </div>
+                            <div class="p-4 rounded-xl bg-surface-container-low border border-outline-variant/10">
+                                <span class="material-symbols-outlined text-primary mb-2" data-icon="eco">eco</span>
+                                <h4 class="font-bold text-xs uppercase tracking-wider mb-1">Impact</h4>
+                                <p class="text-[10px] text-secondary leading-snug">100% compostable, aucun déchet
+                                    chimique ni plastique.</p>
+                            </div>
+                            <div class="p-4 rounded-xl bg-surface-container-low border border-outline-variant/10">
+                                <span class="material-symbols-outlined text-primary mb-2"
+                                    data-icon="payments">payments</span>
+                                <h4 class="font-bold text-xs uppercase tracking-wider mb-1">Valeur</h4>
+                                <p class="text-[10px] text-secondary leading-snug">Une alternative économique complétant
+                                    brosse et dentifrice.</p>
+                            </div>
+                        </div>
+                        <a href="https://opnform.com/forms/contact-form-wnznts"
+                            class="w-full bg-surface-container-highest text-on-surface py-4 rounded-full font-bold tracking-widest uppercase text-xs hover:bg-surface-container-high transition-colors inline-block text-center">
+                            Acheter séparément — 3€
+                        </a>
+                    </div>
+                </div>
+            </section>
+            <section class="md:col-span-4 group mt-12">
+                <div
+                    class="bg-surface-container-low rounded-xl p-8 bento-card h-full flex flex-col border border-outline-variant/10">
+                    <div class="h-48 mb-8 overflow-hidden rounded-lg">
+                        <img alt="Détail Aluminium Brossé" class="w-full h-full object-cover"
+                            data-alt="Brushed aerospace-grade aluminum surface with elegant metallic sheen and soft vertical highlights"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuAWMHzfCnrNZ0gRrx0SVxpZDTiuchUW_4wY3pVI6eQYepbeN_8yjvkfCZR-Nk-TWoCS7NohVHTDtQhWe5v93s2BBsOjMeZ0yFXDXIciK-bZb2akMeD04rkWXnhW9Sue4Py7HsQDtg70vo694CW8BUOenM2do5YwkJ2YlMyNOS_9uPfQt9ItRjB5Bx9SrLEWlNIt0H7QLhNeS9vhRdr1WvbDlouoJQ28RW4rJF6wnz7tk9PqqFdZB3ZC0HO7KVerlmBovGmTK-jeUgE" />
+                    </div>
+                    <div class="flex-1">
+                        <h3 class="text-sm font-bold uppercase tracking-widest text-primary mb-4">L'Écrin Protecteur
+                        </h3>
+                        <p class="text-2xl font-bold tracking-tight mb-4 leading-tight">Alu Chirurgical <br />Anodisé
+                        </p>
+                        <p class="text-secondary text-sm">Le compagnon de voyage idéal, conçu pour conserver la
+                            fraîcheur et l'hygiène de votre Siwak en toutes circonstances.</p>
+                    </div>
+                </div>
+            </section>
+            <section class="md:col-span-8 mt-12">
+                <div
+                    class="bg-surface-container-lowest rounded-xl p-8 h-full flex flex-col md:flex-row gap-12 bento-card border border-outline-variant/10">
+                    <div class="flex-1 space-y-8 py-4">
+                        <div class="flex justify-between items-start">
+                            <div>
+                                <h2 class="text-3xl font-bold tracking-tight mb-2">Gratte-langue Inoxydable</h2>
+                                <p class="text-secondary text-sm">Une finition chirurgicale pour un nettoyage précis de
+                                    la langue, éliminant les bactéries responsables de la mauvaise haleine.</p>
+                            </div>
+                        </div>
+                        <div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
+                            <div class="p-4 rounded-xl bg-surface-container-low border border-outline-variant/10">
+                                <span class="material-symbols-outlined text-primary mb-2"
+                                    data-icon="health_and_safety">health_and_safety</span>
+                                <h4 class="font-bold text-xs uppercase tracking-wider mb-1">Hygiène</h4>
+                                <p class="text-[10px] text-secondary leading-snug">Élimine les toxines accumulées durant
+                                    la nuit.</p>
+                            </div>
+                            <div class="p-4 rounded-xl bg-surface-container-low border border-outline-variant/10">
+                                <span class="material-symbols-outlined text-primary mb-2"
+                                    data-icon="recycling">recycling</span>
+                                <h4 class="font-bold text-xs uppercase tracking-wider mb-1">Impact</h4>
+                                <p class="text-[10px] text-secondary leading-snug">Acier inoxydable.</p>
+                            </div>
+                            <div class="p-4 rounded-xl bg-surface-container-low border border-outline-variant/10">
+                                <span class="material-symbols-outlined text-primary mb-2"
+                                    data-icon="savings">savings</span>
+                                <h4 class="font-bold text-xs uppercase tracking-wider mb-1">Valeur</h4>
+                                <p class="text-[10px] text-secondary leading-snug">Un investissement pour une vie
+                                    entière.</p>
+                            </div>
+                        </div>
+                        <a href="https://opnform.com/forms/contact-form-wnznts"
+                            class="w-full bg-surface-container-highest text-on-surface py-4 rounded-full font-bold tracking-widest uppercase text-xs hover:bg-surface-container-high transition-colors inline-block text-center">
+                            Acheter séparément — 5€
+                        </a>
+                    </div>
+                    <div class="flex-1">
+                        <img alt="Instrument Dentaire Premium" class="w-full h-full object-cover rounded-lg"
+                            data-alt="Minimalist surgical steel dental scraper on a clean white linen surface with soft morning light"
+                            src="img-produits/Gratte-Langue 2.jpeg" />
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+    <footer class="bg-[#f4f4f2] dark:bg-stone-900 rounded-t-lg">
+        <div class="flex flex-col md:flex-row justify-between items-start px-12 py-10 w-full max-w-7xl mx-auto gap-8">
+            <div class="flex flex-col">
+                <div class="text-lg font-bold text-[#154212] font-headline mb-2 uppercase tracking-widest">DENTABOX
+                </div>
+                <p class="font-['Inter'] tracking-[0.05em] uppercase text-xs text-[#526351]">© 2026 Dentabox.</p>
+            </div>
+            <div class="flex flex-col gap-2">
+                <span class="font-['Inter'] tracking-[0.05em] uppercase text-xs font-bold text-[#154212]">Contact</span>
+                <a class="font-['Inter'] tracking-[0.05em] text-xs text-[#526351] hover:text-primary transition-colors"
+                    href="mailto:info.dentabox.be@gmail.com">info.dentabox.be@gmail.com</a>
+            </div>
+            <div class="flex space-x-8">
+                <a class="font-['Inter'] tracking-[0.05em] uppercase text-xs text-[#526351] hover:opacity-70 transition-opacity"
+                    href="https://www.instagram.com/dentabox_official?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==">Instagram</a>
+            </div>
+        </div>
+    </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const btn = document.getElementById('mobile-menu-button');
+            const menu = document.getElementById('mobile-menu');
+            if(btn && menu) {
+                btn.addEventListener('click', () => {
+                    menu.classList.toggle('hidden');
+                });
+            }
+        });
+    </script>
+</body>
+
+</html>
